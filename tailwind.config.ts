@@ -62,12 +62,19 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				earth: {
-					brown: '#8B4513',
-					forest: '#228B22', 
-					beige: '#D2691E',
-					light: '#F5F5DC',
-					cream: '#FFFEF4'
+				modern: {
+					purple: '#8B5CF6',
+					pink: '#EC4899',  
+					blue: '#3B82F6',
+					cyan: '#06B6D4',
+					orange: '#F97316',
+					yellow: '#EAB308',
+					green: '#10B981',
+					gradient: {
+						primary: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+						secondary: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+						accent: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
+					}
 				}
 			},
 			borderRadius: {
@@ -91,11 +98,43 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-20px)' }
+				},
+				'slide-up': {
+					'0%': { transform: 'translateY(100%)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				'slide-in-left': {
+					'0%': { transform: 'translateX(-100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'fade-in-up': {
+					'0%': { transform: 'translateY(30px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				'scale-in': {
+					'0%': { transform: 'scale(0.8)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'gradient-shift': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-slow': 'bounce 3s infinite',
+				'pulse-slow': 'pulse 4s infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'slide-up': 'slide-up 0.5s ease-out',
+				'slide-in-left': 'slide-in-left 0.6s ease-out',
+				'fade-in-up': 'fade-in-up 0.8s ease-out',
+				'scale-in': 'scale-in 0.4s ease-out',
+				'gradient-shift': 'gradient-shift 3s ease-in-out infinite'
 			}
 		}
 	},
